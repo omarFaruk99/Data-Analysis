@@ -1,0 +1,1 @@
+"Superstore" raw data basically used to data visulation with Tableau.
