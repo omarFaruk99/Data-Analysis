@@ -1,0 +1,31 @@
+
+##Note## Sales: is a sql file that i use in this project
+
+..........here are some sql query that I use further analysis.........
+
+use sales;
+
+# Q1: total number of customer 
+SELECT  count(*) from customers;
+
+# Q2: Show tranjaction for chennai market
+select count(*) from transactions where market_code = "Mark001";
+
+
+# Q3: Show distrinct product codes that were sold in chennai
+select distinct(product_code) from transactions where market_code = "Mark001";
+
+
+# Q4: Show transactions in 2020 join by date table
+select transactions.*,date.* from transactions inner join date on transactions.order_date = date.date;
+
+
+#Q5: Show total revenue in year 2020, january month
+select sum(sales_amount) from transactions inner join date on transactions.order_date = date.date where month_name = "January"
+and year = 2020;
+
+
+
+
+
+
